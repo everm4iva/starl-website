@@ -1,2 +1,398 @@
-Nice white.. 
-is this considered a digital void? it's comfy here.
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Starl</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="./style.css" />
+
+        <!-- icon -->
+        <link rel="icon" type="image/x-icon" href="./assets/app.png" />
+    </head>
+    <body
+        class="bg-gradient-to-br from-slate-900 via-neutral-900 to-slate-800 text-gray-100 antialiased animated-bg"
+    >
+        <header class="head">
+            <nav
+                class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+            >
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="h-8 w-8 rounded-full overflow-hidden bg-white/10 flex items-center justify-center"
+                    >
+                        <img
+                            src="./assets/app.png"
+                            alt="Starl"
+                            class="h-8 w-8 object-cover"
+                        />
+                    </div>
+                    <span class="text-lg font-semibold">Starl</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="text-gray-300 hover:text-white"
+                        >About</a
+                    >
+                    <a href="#features" class="text-gray-300 hover:text-white"
+                        >Features</a
+                    >
+                    <!--<a href="#changelog" class="text-gray-300 hover:text-white"
+                        >ChangeLog</a
+                    >-->
+                    <a href="#builds" class="text-gray-300 hover:text-white"
+                        >Builds</a
+                    >
+                    <a href="#faq" class="text-gray-300 hover:text-white"
+                        >FAQ</a
+                    >
+                    <a
+                        href="https://github.com/everm4iva/starl-website"
+                        class="text-gray-300 hover:text-white"
+                        >GitHub</a
+                    >
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button
+                        class="hidden md:inline-flex items-center px-4 py-2 bg-white/10 text-sm rounded-full hover:bg-white/20"
+                    >
+                        Docs
+                    </button>
+                    <a
+                        href="#"
+                        class="px-4 py-2 bg-white text-neutral-900 rounded-full text-sm font-medium shadow-sm hover:bg-white/90"
+                        >Download</a
+                    >
+                </div>
+            </nav>
+        </header>
+        <div class="body">
+            <div
+                class="About min-h-[60vh] flex items-center justify-center gap-6 px-4 md:px-6 pt-6 md:pt-10 pb-6 md:pb-8 flex-col md:flex-row"
+                id="about"
+            >
+                <div class="Links w-full md:w-2/5">
+                    <section
+                        class="max-w-4xl px-6 py-16 md:py-20 flex flex-col gap-4 rounded-2xl p-8 md:p-12"
+                    >
+                        <h1
+                            class="text-7xl md:text-8xl font-extrabold leading-tight tracking-tight mb-0"
+                        >
+                            Starl
+                        </h1>
+                        <h2
+                            class="-mt-2 text-xl md:text-2xl font-semibold text-gray-300"
+                        >
+                            Your Minimalist Music Platform
+                        </h2>
+                        <p class="mt-4 text-gray-300 max-w-xl text-left">
+                            A super-lightweight, local and private mobile music
+                            platform, plays music and videos from other
+                            platforms and supports offline features.
+                        </p>
+                        <div
+                            class="mt-6 flex items-center justify-center md:justify-start gap-4"
+                        >
+                            <a
+                                href="#"
+                                class="inline-flex items-center gap-3 px-6 py-3 bg-white text-neutral-900 rounded-full shadow-md transform transition hover:scale-[1.02]"
+                            >
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true"
+                                >
+                                    <rect
+                                        x="6"
+                                        y="2"
+                                        width="12"
+                                        height="20"
+                                        rx="2"
+                                    ></rect>
+                                    <circle cx="12" cy="17" r="1"></circle>
+                                </svg>
+                                <span>Download for Android</span>
+                            </a>
+                            <a
+                                href="https://github.com/everm4iva/starl-website"
+                                class="inline-flex items-center gap-3 px-6 py-3 border border-white/10 rounded-full"
+                            >
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M12 .5C5.73.5.5 5.74.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1-.01-1.96-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.09 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.75.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.83 1.18 3.09 0 4.45-2.7 5.43-5.27 5.72.41.35.77 1.03.77 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.21.66.79.55C20.71 21.39 24 17.08 24 12c0-6.26-5.23-11.5-12-11.5z"
+                                    />
+                                </svg>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+
+                        <div class="mt-1 w-full flex justify-left">
+                            <div
+                                class="hero-stats w-full max-w-md bg-white/5 border border-white/6 text-gray-200 rounded-xl overflow-hidden flex divide-x divide-white/6"
+                            >
+                                <div class="p-2 md:p-3 flex-1 text-center">
+                                    <div
+                                        class="text-base md:text-lg font-semibold"
+                                    >
+                                        &lt; 40mb
+                                    </div>
+                                    <div
+                                        class="text-[10px] md:text-[11px] text-gray-400 mt-0.5 uppercase tracking-widest"
+                                    >
+                                        App size
+                                    </div>
+                                </div>
+
+                                <div class="p-2 md:p-3 flex-1 text-center">
+                                    <div
+                                        class="text-base md:text-lg font-semibold leading-tight"
+                                    >
+                                        Pure Freedom Forever
+                                    </div>
+                                    <div
+                                        class="text-[10px] md:text-[11px] text-gray-400 mt-0.5 uppercase tracking-widest"
+                                    >
+                                        Open source
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div
+                    class="Dowloads hidden md:flex w-2/5 items-center justify-center"
+                >
+                    <div
+                        class="player-showcase player-glow w-72 md:w-80 lg:w-96"
+                    >
+                        <div
+                            class="player-card rounded-2xl overflow-hidden shadow-2xl"
+                        >
+                            <div class="player-shine"></div>
+                            <!-- add this -->
+                            <img
+                                src="./assets/player.png"
+                                alt="Player preview"
+                                class="player-img w-full h-auto object-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="Music Player"></div>
+            <div class="Playlist"></div>
+
+            <div class="Features" id="features">
+                <section class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+                    <h3 class="text-3xl md:text-4xl font-bold text-center mb-8">Features</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                        <div class="feature-card p-6 rounded-2xl">
+                            <div class="text-xl md:text-2xl font-semibold mb-2">Public Server</div>
+                            <p class="text-gray-300 text-sm">Connect instantly to a ready-to-use public server and start streaming without extra setup.</p>
+                        </div>
+
+                        <div class="feature-card p-6 rounded-2xl">
+                            <div class="text-xl md:text-2xl font-semibold mb-2">Live lyrics</div>
+                            <p class="text-gray-300 text-sm">Follow synced, real-time lyrics while music plays, with smooth scrolling and offline support.</p>
+                        </div>
+
+                        <div class="feature-card p-6 rounded-2xl">
+                            <div class="text-xl md:text-2xl font-semibold mb-2">Discord Support</div>
+                            <p class="text-gray-300 text-sm">Show your listening activity with Discord Rich Presence and share playback with friends.</p>
+                        </div>
+
+                        <div class="feature-card p-6 rounded-2xl">
+                            <div class="text-xl md:text-2xl font-semibold mb-2">Local Hosting</div>
+                            <p class="text-gray-300 text-sm">Run your own Starl server locally for private syncing, control, and full ownership of your data.</p>
+                        </div>
+
+                        <div class="feature-card p-6 rounded-2xl">
+                            <div class="text-xl md:text-2xl font-semibold mb-2">Clean Design</div>
+                            <p class="text-gray-300 text-sm">A clean, distraction-free interface that keeps focus on your music and key actions.</p>
+                        </div>
+
+                        <div class="feature-card p-6 rounded-2xl">
+                            <div class="text-xl md:text-2xl font-semibold mb-2">Fast</div>
+                            <p class="text-gray-300 text-sm">Built for speed with quick startup, responsive controls, and lightweight performance.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl md:text-2xl font-semibold text-center mb-6">In-app previews</h4>
+                    <div class="text-gray-300 text-sm text-center mb-12">Get a sneak peek of the app's interface and features with these in-app screenshots.</div>
+
+                    <div class="previews">
+                        <!-- Home: image left, text right -->
+                        <div class="preview-card bg-white/3 border border-white/6 rounded-2xl p-3 text-left flex flex-col md:flex-row items-center gap-6">
+                            <div class="preview-frame w-full md:w-1/3 rounded-lg relative">
+                                <img src="./assets/Home.png" alt="Home preview" class="w-full h-full object-cover">
+                                <div class="preview-shine"></div>
+                            </div>
+                            <div class="preview-text w-full md:w-2/3 p-3">
+                                <div class="text-xl font-semibold">Home</div>
+                                <p class="text-gray-300 mt-2">Quick access to recent tracks, recommended mixes, and the current playback queue — everything you need to pick up where you left off.</p>
+                            </div>
+                        </div>
+
+                        <div class="preview-card bg-white/3 border border-white/6 rounded-2xl p-3 text-left flex flex-col md:flex-row items-center gap-6">
+                            <div class="preview-text w-full md:w-2/3 p-3">
+                                <div class="text-xl font-semibold">Library</div>
+                                <p class="text-gray-300 mt-2">Organize your local collection, create playlists, and quickly search across all your music and videos.</p>
+                            </div>
+                            <div class="preview-frame w-full md:w-1/3 rounded-lg relative">
+                                <img src="./assets/Library.png" alt="Library preview" class="w-full h-full object-cover">
+                                <div class="preview-shine"></div>
+                            </div>
+                        </div>
+
+                        <!-- Login: text left, image right (server/connect/settings) -->
+                        <div class="preview-card bg-white/3 border border-white/6 rounded-2xl p-3 text-left flex flex-col md:flex-row items-center gap-6">
+                            <div class="preview-frame w-full md:w-1/3 rounded-lg relative">
+                                <img src="./assets/Login.png" alt="Login preview" class="w-full h-full object-cover">
+                                <div class="preview-shine"></div>
+                            </div>
+                            <div class="preview-text w-full md:w-2/3 p-3">
+                                <div class="text-xl font-semibold">Login</div>
+                                <p class="text-gray-300 mt-2">Secure sign-in and server connection settings for syncing with your Starl Server — keep control of your data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="Builds">
+                <section id="builds" class="max-w-6xl mx-auto px-6 py-12 md:py-16 builds-section">
+                    <h3 class="text-3xl md:text-4xl font-bold text-center mb-6">Builds</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!--<div class="p-4 rounded-2xl bg-white/3 border border-white/6 text-center">
+                            <div class="font-semibold mb-1">Android (arm64)</div>
+                            <div class="text-sm text-gray-400 mb-3">APK build — latest stable</div>
+                            <a href="#" class="inline-flex items-center justify-center px-4 py-2 bg-white text-neutral-900 rounded-full text-sm font-medium shadow-sm">Download APK</a>
+                        </div>-->
+
+                        <div class="p-4 rounded-2xl bg-white/3 border border-white/9 text-center opacity-60 pointer-events-none">
+                            <div class="font-semibold mb-1">Android (arm64)</div>
+                            <div class="text-sm text-gray-400 mb-3">APK build — latest stable</div>
+                            <div class="my-6"></div>
+                            <span class="inline-flex items-center justify-center px-4 py-2 border border-white/10 rounded-full text-sm opacity-50">Coming soon</span>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-white/3 border border-white/6 text-center opacity-60 pointer-events-none">
+                            <div class="font-semibold mb-1">Windows</div>
+                            <div class="text-sm text-gray-400 mb-3">Installer and portable builds for Windows 10/11.</div>
+                            <div class="my-6"></div>
+                            <span class="inline-flex items-center justify-center px-4 py-2 border border-white/10 rounded-full text-sm opacity-50">Coming soon</span>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-white/3 border border-white/6 text-center opacity-60 pointer-events-none">
+                            <div class="font-semibold mb-1">Linux</div>
+                            <div class="text-sm text-gray-400 mb-3">AppImage build — latest stable</div>
+                            <div class="my-6"></div>
+                            <span class="inline-flex items-center justify-center px-4 py-2 border border-white/10 rounded-full text-sm opacity-50">Coming soon</span>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="my-12"></div>
+
+                    <div class="mt-6 text-center text-gray-400">Starl Server Builds</div>
+                    <!-- little space-->
+                    <div class="my-4"></div>
+
+                    <div class="p-4 rounded-2xl bg-white/3 border border-white/6 text-center opacity-60 pointer-events-none">
+                        <div class="font-semibold mb-1">Starl Server</div>
+                        <div class="text-sm text-gray-400 mb-3">Pre-built server binaries for easy local hosting and syncing.</div>
+                        <div class="my-6"></div>
+                        <span class="inline-flex items-center justify-center px-4 py-2 border border-white/10 rounded-full text-sm opacity-50">Windows</span>
+                        <span class="inline-flex items-center justify-center px-4 py-2 border border-white/10 rounded-full text-sm opacity-50">Linux</span>
+                    </div>
+                </section>
+            </div>
+
+            <!--<section id="changelog" class="max-w-6xl mx-auto px-6 py-12 md:py-16 changelog-section">
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-6">ChangeLog</h3>
+
+                <div class="changelog-list max-w-4xl mx-auto space-y-4">
+                    <article class="changelog-item rounded-2xl p-5 md:p-6">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="text-sm px-3 py-1 rounded-full bg-white/10 border border-white/10">v0.5.0</span>
+                            <span class="text-sm text-gray-400">2026-05-31</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">UI Refresh & Preview Interactions</h4>
+                        <p class="text-gray-300 text-sm">
+                            Added interactive in-app previews with pointer-based movement, improved landing layout spacing, and polished feature content.
+                        </p>
+                    </article>
+
+                    <article class="changelog-item rounded-2xl p-5 md:p-6">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="text-sm px-3 py-1 rounded-full bg-white/10 border border-white/10">v0.4.2</span>
+                            <span class="text-sm text-gray-400">2026-05-28</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Builds & FAQ Improvements</h4>
+                        <p class="text-gray-300 text-sm">
+                            Expanded FAQ entries, improved section structure, and updated builds cards styling to match the rest of the site design.
+                        </p>
+                    </article>
+
+                    <article class="changelog-item rounded-2xl p-5 md:p-6">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="text-sm px-3 py-1 rounded-full bg-white/10 border border-white/10">v0.4.0</span>
+                            <span class="text-sm text-gray-400">2026-05-24</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Core Features Added</h4>
+                        <p class="text-gray-300 text-sm">
+                            Introduced Public Server, Live Lyrics, Discord Support, Local Hosting, and improved overall performance and responsiveness.
+                        </p>
+                    </article>
+                </div>
+            </section>-->
+
+            <div class="Questions" id="faq">
+                <section class="max-w-6xl mx-auto px-6 py-12 md:py-16 faq-section">
+                    <h3 class="text-3xl md:text-4xl font-bold text-center mb-6">FAQ</h3>
+                    <div class="max-w-3xl mx-auto space-y-4">
+                        <details class="mb-4">
+                            <summary class="text-lg font-medium">Is Starl open-source?</summary>
+                            <div class="mt-2 text-gray-300 text-sm">Yes — Starl is released under the PFF License ( PURE FREEDOM FOREVER ).</div>
+                        </details>
+                        <details class="mb-4">
+                            <summary class="text-lg font-medium">Does it collect telemetry?</summary>
+                            <div class="mt-2 text-gray-300 text-sm">No telemetry is collected. The app may optionally integrate with services you enable (e.g., Discord) and those integrations are under your control.</div>
+                        </details>
+                        <details class="mb-4">
+                            <summary class="text-lg font-medium">How do I run the Starl Server?</summary>
+                            <div class="mt-2 text-gray-300 text-sm">Check the Docs for a step-by-step guide. In short: run the server binary, point the app to your server address, and enable synchronization in settings.</div>
+                        </details>
+                        <details class="mb-4">
+                            <summary class="text-lg font-medium">How do Live Lyrics work?</summary>
+                            <div class="mt-2 text-gray-300 text-sm">Live lyrics are matched to tracks and synced in real time. You can download lyric packs for offline use. Accuracy improves with local caches.</div>
+                        </details>
+                        <details class="mb-4">
+                            <summary class="text-lg font-medium">How can I contribute or report bugs?</summary>
+                            <div class="mt-2 text-gray-300 text-sm">Open issues or pull requests on the GitHub repo. For security-sensitive bugs, contact the maintainers privately (see Docs).</div>
+                        </details>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="foot">
+            <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between text-gray-300">
+                <div class="text-sm">&copy; 2026 Starl — Built with privacy in mind.</div>
+                <div class="mt-3 md:mt-0 flex items-center gap-4">
+                    <a href="#" class="text-sm hover:text-white">Privacy</a>
+                    <a href="#" class="text-sm hover:text-white">Docs</a>
+                    <a href="https://github.com/everm4iva/starl-website" class="text-sm hover:text-white">GitHub</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

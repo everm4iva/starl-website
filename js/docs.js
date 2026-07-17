@@ -4,7 +4,7 @@
 // here in the page - new docs show up with zero website updates, rad right?
 
 // -- root config, all in one place so future me can move stuff around --
-const DOCS_MANIFEST_URL = 'https://raw.githubusercontent.com/everm4iva/starl/refs/heads/main/docs/url.txt';
+const DOCS_MANIFEST_URL = 'https://raw.githubusercontent.com/everm4iva/starl/refs/heads/main/!docs/url.txt';
 const DOCS_GROUP_TITLES = ['START', 'GENERAL', 'RUN YOUR OWN SERVER', 'DEEP DIVES'];
 const DOCS_DEFAULT_SLUG = 'index';
 const DOCS_HOME_URL = 'https://github.com/everm4iva/starl';

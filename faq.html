@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>starl - faq</title>
+	<meta name="description" content="the one page that casually explains the whole damn thing" />
+	<link rel="icon" href="media/img/GlitterMadness-t.png" />
+	<link rel="stylesheet" href="styles/faq.css" />
+	<link rel="stylesheet" href="styles/spray.css" />
+	<link rel="stylesheet" href="styles/drag.css" />
+	<script src="js/wiggle.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<script src="js/drag.js" defer></script>
+</head>
+<body>
+
+	<!-- ============================== nav ============================== -->
+	<nav class="punk-nav">
+		<a class="nav-logo" href="index.html">STARL</a>
+		<a href="index.html#features">FEATURES</a>
+		<a href="faq.html">FAQ</a>
+		<a href="docs.html">DOCS</a>
+		<a href="https://github.com/everm4iva/starl">GITHUB</a>
+	</nav>
+
+	<!-- ============================== header ============================== -->
+	<header class="hero">
+		<h1 class="hero-title" data-wiggle>FAQ</h1>
+		<p class="hero-sub">THE WHOLE DAMN THING, EXPLAINED</p>
+	</header>
+
+	<div class="tape acid"><span class="tape-inner">ASK ANYTHING ★ GET A STRAIGHT ANSWER ★ NO CORPORATE SPEAK ★ </span></div>
+
+	<section class="section">
+		<p class="faq-intro">
+			if your question isn't here, open an issue on
+			<a href="https://github.com/everm4iva/starl/issues">github</a> with the tag "FAQ"
+			and it gets answered and added. simple as that.
+		</p>
+
+		<!-- ============================== answered by the code ============================== -->
+		<h2 class="faq-group" data-wiggle>☆ ANSWERED BY THE CODE</h2>
+
+		<details class="faq-item">
+			<summary>what does "local-first" actually mean here?</summary>
+			<div class="answer">
+				<p>the app is yours, content is yours, data is yours. <b>you own it all.</b> the client stores everything locally on your device, and the server is just a tool - a proxy for youtube and a cache for your data. not a middleman.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>can i use it with no internet / if the server dies?</summary>
+			<div class="answer">
+				<p>yes - as long as you've used the app for a while and have songs cached, <b>offline mode</b> lets you browse and play all your cached content with zero connection. the app is built to keep working when the server isn't.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>how did streaming latency drop from 17s to 2s?</summary>
+			<div class="answer">
+				<p>server's fault. every image and every audio requested gets stored to disk - next time anything asks for it, the server streams it straight from disk instead of going back to youtube. plus the server got rebuilt in nodejs, keeping only yt-dlp and ytmusicapi in python.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>there's no download button. how do i have songs offline?</summary>
+			<div class="answer">
+				<p>the client <b>caches automatically while you listen</b> - in the background, while you do your business. and if you go offline, the smart-queue skips straight to the next cached song, so the music never stops.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>why does skipping feel instant?</summary>
+			<div class="answer">
+				<p>batch cache. while the current song plays, the app pre-caches the next (and previous) 8 tracks in the background. by the time you hit skip, the next track is usually already sitting there ready.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>isn't this just a modified youtube player?</summary>
+			<div class="answer">
+				<p>no. it uses youtube as a <b>source</b>, but the code is written from scratch - its own design, its own features, its own way of thinking about things, way beyond simple playback.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>could i point the app at youtube myself and skip the backend?</summary>
+			<div class="answer">
+				<p>no - by design. the client never talks to youtube directly, it only ever speaks to the server. one url, one switch, the whole app follows. so "running your own starl" really means running your own backend.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>what audio quality do i get?</summary>
+			<div class="answer">
+				<p>whatever the server thinks is best: usually <b>128kbps AAC</b> from a youtube video, <b>256kbps AAC</b> from a youtube music track. both play flawlessly.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>what happens to my stuff if i log out or reinstall?</summary>
+			<div class="answer">
+				<p>cached data on the device? poof, gone. but your account data, settings and history live on the server, so logging back in syncs it all back - and the server probably still has your songs cached, so streaming is instant again.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>why isn't it on the play store?</summary>
+			<div class="answer">
+				<p>app stores are a legal inferno. here, if you have a problem you report it and watch the whole fix happen in the open. how can it be more accessible, transparent and trustworthy than this?</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>ios?</summary>
+			<div class="answer">
+				<p>not planned anytime soon - no apple hardware, no wish to fight the apple ecosystem. android is the target, a browser/desktop client is the someday-stretch.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>is it legal, with youtube's TOS and all?</summary>
+			<div class="answer">
+				<p>gray area, honestly. it's a tool - it's up to you to use it and host it, nobody's incentivizing anything. not intended for commercial use, use at your own risk.</p>
+			</div>
+		</details>
+
+		<!-- ============================== answered by the creator ============================== -->
+		<h2 class="faq-group" data-wiggle>☆ ANSWERED BY THE CREATOR</h2>
+
+		<details class="faq-item">
+			<summary>why build your own app instead of using the big ones?</summary>
+			<div class="answer">
+				<p>"i'd rather own a broken tool that belongs to me and my friends, than a perfect tool that belongs to a corporation, asks me for money for basic features and uses my stuff against me."</p>
+				<p>plus, we can add funny stuff and invent features that never existed before.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>vanilla js, no framework, by hand. why?</summary>
+			<div class="answer">
+				<p>frameworks trade control for tools you might not need - bloat, not necessarily in size but in complexity. <b>i like control, and i like simplicity.</b> learn the tool, not a framework that might die or change under you.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>where does the name "starl" come from?</summary>
+			<div class="answer">
+				<p>I JUST LOOOVE STARZZZ heheheh :3 - everything about them sparks something inside me.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>what made "instant skip" worth all that complexity?</summary>
+			<div class="answer">
+				<p>empathy.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>any telemetry, tracking or analytics?</summary>
+			<div class="answer">
+				<p>no. but yes for listening stats - needed for the recommendation system, and you can erase all your data and disable it anytime. your choice, always.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>who pays for hosting if it's free forever?</summary>
+			<div class="answer">
+				<p>the public server runs on the creator's own bare hardware - no cloud, no bills to pass on. control, and this time also privacy: no cloud service sitting between your data and the one person responsible for it.</p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>are you planning to monetize anything?</summary>
+			<div class="answer">
+				<p>no. ever. voluntarily not. everm4iva denies. really serious about this. <b>aka: NEVER</b></p>
+			</div>
+		</details>
+
+		<details class="faq-item">
+			<summary>what does "finished" look like for starl?</summary>
+			<div class="answer">
+				<p>stable, self-hosted, the most open, well documented and easy to use music app possible - so one day the users can keep using it, understand it and change it without anyone's permission. including the creator's.</p>
+			</div>
+		</details>
+
+		<div class="faq-ask">
+			<a class="punk-btn big" href="https://github.com/everm4iva/starl/issues">ASK YOUR OWN QUESTION <span class="tag">FAQ TAG</span></a>
+		</div>
+	</section>
+
+	<!-- ============================== footer ============================== -->
+	<footer class="punk-footer">
+		<span class="foot-star" data-spray>★</span>
+		<p>
+			starl - 
+			<a href="index.html">back home</a> ·
+			<a href="docs.html">docs</a> ·
+			<a href="https://github.com/everm4iva/starl">github</a>
+		</p>
+	</footer>
+
+</body>
+</html>

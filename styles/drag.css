@@ -1,0 +1,29 @@
+@import url('./root.css');
+
+/* -------------------------------------------------- draggable stuff -------------------------------------------------- */
+
+[data-drag] {
+	translate: var(--drag-x, 0px) var(--drag-y, 0px);
+	rotate: var(--drag-rot, 0deg);
+	touch-action: none;
+	cursor: var(--cursor-aim);
+}
+
+[data-drag].dragging {
+	position: relative;
+	z-index: 90;
+	user-select: none;
+	cursor: var(--cursor-aim-press);
+	animation: none;
+}
+
+[data-drag].dragging * {
+	animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	[data-drag] {
+		translate: 0px 0px;
+		rotate: 0deg;
+	}
+}

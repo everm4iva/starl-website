@@ -1,0 +1,25 @@
+@import url('./root.css');
+
+/* -------------------------------------------------- star spray -------------------------------------------------- */
+
+@keyframes spray-fly {
+	0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+	30% { transform: translate(calc(var(--dx) * 0.4), calc(var(--dy) * 0.4)) rotate(calc(var(--rot) * 0.4)); opacity: 1; }
+	60% { transform: translate(calc(var(--dx) * 0.8), calc(var(--dy) * 0.8)) rotate(calc(var(--rot) * 0.8)); opacity: 1; }
+	100% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); opacity: 0; }
+}
+
+.spray-star {
+	position: fixed;
+	left: var(--sx);
+	top: var(--sy);
+	z-index: 999;
+	pointer-events: none;
+	font-size: 1.6rem;
+	color: var(--punk-accent);
+	text-shadow: 3px 3px 0 var(--punk-black);
+	animation: spray-fly 0.85s steps(6, end) forwards;
+}
+
+.spray-star:nth-child(odd) { color: var(--punk-acid); }
+.spray-star:nth-child(3n) { color: var(--punk-pink); }

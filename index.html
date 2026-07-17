@@ -1,11 +1,263 @@
-Nice white.. 
-is this considered a digital void? it's comfy here.
-<p></p>
-Well.. soon the website will be avaliable
-<p>Enjoy this classy music, a well known pearl in the digital void.</p>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>starl - your music, your rules</title>
+	<meta name="description" content="starl is a free and open-source streaming music client - no ads, no algorithms you don't control, no subscriptions" />
+	<link rel="icon" href="media/img/GlitterMadness-Frame.png" />
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/spray.css" />
+	<link rel="stylesheet" href="styles/drag.css" />
+	<script src="js/wiggle.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<script src="js/drag.js" defer></script>
+</head>
+<body>
 
-<audio controls>
-  <source src="https://everm4iva.github.io/media/audio/other/limbo.ogg" type="audio/ogg">
-</audio>
+	<!-- ============================== nav ============================== -->
+	<nav class="punk-nav">
+		<a class="nav-logo" href="index.html">STARL</a>
+		<a href="#features">FEATURES</a>
+		<a href="#shots">SCREENSHOTS</a>
+		<a href="#license">LICENSE</a>
+		<a href="faq.html">FAQ</a>
+		<a href="docs.html">DOCS</a>
+		<a href="#privacy">PRIVACY</a>
+		<a href="https://github.com/everm4iva/starl">GITHUB</a>
+	</nav>
 
-<!-- Audio: sounds of waves crashing into shore, no wind, sounds artificial -->
+	<!-- ============================== hero ============================== -->
+	<header class="hero">
+		<div class="hero-icon" data-spray title="click me :3"></div>
+		<h1 class="hero-title" data-wiggle>STARL</h1>
+		<p class="hero-sub">AN OPEN, STREAMING MUSIC CLIENT ♡</p>
+		<p class="hero-small">
+			<b>free</b> and <b>open-source</b> music player - no ads, no algorithms you don't
+			control, no subscriptions. you own your music and your data.
+			offline-first, so the music keeps going even when the internet doesn't.
+		</p>
+		<div class="hero-stamp" data-wiggle>100% FREE FOREVER</div>
+	</header>
+
+	<!-- ============================== buttons ============================== -->
+	<div class="btn-row">
+		<a class="punk-btn big" href="https://github.com/everm4iva/starl/releases/latest/download/starl-android.apk">
+			GET THE ANDROID APK <span class="tag">~40 MB</span>
+		</a>
+		<a class="punk-btn accent" href="docs.html#starl-server">
+			RUN YOUR OWN SERVER <span class="tag">SELF-HOST</span>
+		</a>
+		<a class="punk-btn dark" href="https://github.com/everm4iva/starl">
+			VIEW ON GITHUB <span class="tag blink">SOURCE</span>
+		</a>
+		<a class="punk-btn pink" href="#license">
+			LICENSE: PFF <span class="tag">RAD</span>
+		</a>
+	</div>
+
+	<div class="tape acid"><span class="tape-inner">NO ADS ★ NO ALGORITHMS ★ NO SUBSCRIPTIONS ★ NO TRACKING ★ NO PAYWALLS ★ </span></div>
+
+	<!-- ============================== screenshots ============================== -->
+	<section class="section" id="shots">
+		<h2 class="section-title" data-wiggle>take a look</h2>
+		<div class="shots">
+			<figure class="shot"><img src="media/img/player.png" alt="full player" loading="lazy" /><figcaption class="shot-label">the player</figcaption></figure>
+			<figure class="shot"><img src="media/img/home.png" alt="home page" loading="lazy" /><figcaption class="shot-label">home + recs</figcaption></figure>
+			<figure class="shot"><img src="media/img/lyrics.png" alt="synced lyrics" loading="lazy" /><figcaption class="shot-label">live lyrics</figcaption></figure>
+			<figure class="shot"><img src="media/img/library.png" alt="library" loading="lazy" /><figcaption class="shot-label">your library</figcaption></figure>
+			<figure class="shot"><img src="media/img/playlist.png" alt="playlist view" loading="lazy" /><figcaption class="shot-label">playlists</figcaption></figure>
+			<figure class="shot"><img src="media/img/artist.png" alt="artist page" loading="lazy" /><figcaption class="shot-label">artist pages</figcaption></figure>
+			<figure class="shot"><img src="media/img/search.png" alt="search" loading="lazy" /><figcaption class="shot-label">search</figcaption></figure>
+			<figure class="shot"><img src="media/img/account.png" alt="account tab" loading="lazy" /><figcaption class="shot-label">account</figcaption></figure>
+		</div>
+	</section>
+
+	<div class="tape pink snappy"><span class="tape-inner">FAST ★ OFFLINE ★ YOURS</span></div>
+
+	<!-- ============================== features ============================== -->
+	<section class="section" id="features">
+		<h2 class="section-title alt" data-wiggle>EVERYTHING UP FRONT</h2>
+		<p class="features-note">
+			these cards look soft and rounded on purpose - that's the app's own style
+			crashing the punk party. this is what it actually feels like inside:
+		</p>
+		<div class="features">
+			<div class="feature-card">
+				<span class="feature-chip">core</span>
+				<h3>Full music player</h3>
+				<p>Smart queue management, shuffle, repeat, skip - and skipping feels instant because the next tracks are already pre-cached in the background.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">vibes</span>
+				<h3>Live lyrics</h3>
+				<p>Lyrics with auto-syncing and scrolling, following the song word by word while you pretend you knew them all along.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">offline</span>
+				<h3>Offline mode</h3>
+				<p>Everything you listen to gets cached automatically. No internet? The smart queue skips straight to what's already on your device, so the music never stops.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">yours</span>
+				<h3>Recommendations you control</h3>
+				<p>Discover new music based on your listening habits - and customize it fully. More of this, less of that, none of those. Your call, always.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">import</span>
+				<h3>Spotify + YouTube import</h3>
+				<p>Bring your playlists over natively. Export your whole library to a JSON file and import it back whenever, wherever.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">sync</span>
+				<h3>Account sync</h3>
+				<p>Your library, history and settings follow you across devices. Log in with Google or Discord - or don't log in at all, offline mode asks for nothing.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">fast</span>
+				<h3>Super fast streaming</h3>
+				<p>The server caches every song and image it touches. Second time anyone asks, it streams straight from disk - that's how 17 seconds became 2.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">system</span>
+				<h3>Background playback</h3>
+				<p>Native music notification with playback controls, built with hand-made plugins - the app keeps playing while you live your life.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">library</span>
+				<h3>A real library</h3>
+				<p>Playlists, favorites, artists, albums, listening history, and a track context menu for everything - add to playlist, jump to album, you name it.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">smart</span>
+				<h3>Typo-proof search</h3>
+				<p>Type "Nyrvana" or "Nir va na" - it still finds the artist. Fuzzy matching plus your own click history makes every search smarter.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">space</span>
+				<h3>Storage management</h3>
+				<p>Set a cache limit in GB or a percentage of free space. The app trims itself automatically - delete songs, clear cache, see exactly what's used.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">pretty</span>
+				<h3>Themes &amp; fonts</h3>
+				<p>Themes, fonts, animations, accent colors... make it yours. The app has personality and lets you have yours too.</p>
+			</div>
+			<div class="feature-card">
+				<span class="feature-chip">power</span>
+				<h3>Self-hosting</h3>
+				<p>Run your own server and stream from it, or use the public one. One URL in the settings, one switch, the whole app follows.</p>
+			</div>
+		</div>
+	</section>
+
+	<div class="tape"><span class="tape-inner">VANILLA JS ★ NO FRAMEWORKS ★ HAND-MADE PLUGINS ★ PURE CONTROL ★ </span></div>
+
+	<!-- ============================== license ============================== -->
+	<section class="section" id="license">
+		<h2 class="section-title" data-wiggle>THE LICENSE</h2>
+		<div class="license-box">
+			<h3>&lt; PURE FREEDOM FOREVER - PFF &gt;</h3>
+			<p>this license states that this project, all sources and code is free, forever!</p>
+			<ul>
+				<li>modify it, fork it, remix it, distribute it - anyone, any way, any context</li>
+				<li>use it for anything, even commercially</li>
+			</ul>
+			<span class="but">BUT!</span>
+			<p>
+				it's provided "AS IS" - once you modify, attribute or store any part of it,
+				you're on your own. no previous parties held liable, under any context.
+			</p>
+			<p><a href="https://github.com/everm4iva/starl/blob/main/LICENSE">read the whole thing (it's short, that's the point) &gt;</a></p>
+		</div>
+	</section>
+
+	<!-- ============================== teasers ============================== -->
+	<section class="section">
+		<h2 class="section-title alt" data-wiggle>GO DEEPER</h2>
+		<div class="teaser-row">
+			<a class="teaser" href="faq.html">
+				<h3>FAQ <span class="blink">?</span></h3>
+				<p>the one page that casually explains the whole damn thing - answered half by the code, half by the creator</p>
+			</a>
+			<a class="teaser" href="docs.html">
+				<h3>DOCS <span class="cycle">»</span></h3>
+				<p>everything documented, simply - the server, the streaming magic, the smart queue, all of it</p>
+			</a>
+		</div>
+	</section>
+
+	<div class="tape acid snappy"><span class="tape-inner">STARS ARE SO COOL ★ :3 lol ★ BECOME PART OF IT ★ THANKS TO Y'ALL ★ </span></div>
+
+	<!-- ============================== cool people ============================== -->
+	<section class="section" id="people">
+		<h2 class="section-title" data-wiggle>COOL PEOPLE</h2>
+		<div class="supporters">
+			<div class="supporter"><div class="who">@ferpen</div><div class="what">testing and honest feedback through the whole development</div></div>
+			<div class="supporter"><div class="who">@Evelyn (owo.sh)</div><div class="what">just being there and supporting the project through</div></div>
+			<div class="supporter"><div class="who">@Kabsaeater</div><div class="what">omg.. he gave me stars... I LOVE STARSSZZ!!!</div></div>
+			<div class="supporter"><div class="who">@inkchasm</div><div class="what">for the kind words and support!</div></div>
+			<div class="supporter"><div class="who">@wasSammyDev</div><div class="what">there since the beginning reacting with 🔥 to everything i throw at him</div></div>
+			<div class="supporter"><div class="who">@pinguino</div><div class="what">all the support, encouragement, and being the person needed to start this in the first place &lt;3</div></div>
+			<div class="supporter"><div class="who">@starloexoliz11</div><div class="what">"Testing the best music app there is :3"</div></div>
+			<div class="supporter"><div class="who">@SubhrajitSain</div><div class="what">"good app. me like."</div></div>
+		</div>
+		<div class="creator-box">
+			<h3>THE CREATOR</h3>
+			<p>
+				one human, no company, no startup. built by
+				<a href="https://everm4iva.github.io">everm4iva / zoeisrad.af</a> -
+				reporting an issue or opening a pull request counts as a contribution,
+				and if you want on this wall, just ask. i love you all! and i love stars!
+			</p>
+		</div>
+	</section>
+
+	<div class="tape pink"><span class="tape-inner">YOUR DATA IS YOURS ★ NO IP LOGS ★ NO AD SDKS ★ NO SELLING ★ EVER ★ </span></div>
+
+	<!-- ============================== privacy ============================== -->
+	<section class="section" id="privacy">
+		<h2 class="section-title alt" data-wiggle>PRIVACY &amp; DATA</h2>
+		<div class="privacy-grid">
+			<div class="privacy-col yes">
+				<h3>what the server keeps</h3>
+				<ul>
+					<li>a random account id, your email, name and avatar (from google/discord login)</li>
+					<li>your app data - library, playlists, history, settings - so it syncs across devices</li>
+					<li>listening stats for recommendations - opt-out, wipeable, exportable</li>
+					<li>a shared song cache keyed by the song, not by you</li>
+				</ul>
+			</div>
+			<div class="privacy-col no">
+				<h3>what never happens</h3>
+				<ul>
+					<li>no ads, no ad SDKs, no ad ids</li>
+					<li>no selling or renting your data, ever</li>
+					<li>no IP logging, no request logs</li>
+					<li>no tracking across apps or sites</li>
+					<li>no password ever seen or stored</li>
+					<li>no cloud - one person's own hardware</li>
+				</ul>
+			</div>
+		</div>
+		<p class="privacy-quote">
+			"i don't say 'i take privacy very seriously'. i say: i have your data, and i only
+			care to make sure it's safe from me and anyone else, in any way i can." - the whole
+			policy is written like that, <a href="https://github.com/everm4iva/starl/blob/main/privacy&data.md">go read it</a>,
+			it's actually readable
+		</p>
+	</section>
+
+	<!-- ============================== footer ============================== -->
+	<footer class="punk-footer">
+		<span class="foot-star" data-spray>★</span>
+		<p>
+			starl - an open music streaming platform, made with.. i donno, love? something like that... anyway, here is some urls
+			<a href="https://github.com/everm4iva/starl">github</a> ·
+			<a href="https://everm4iva.github.io">everm4iva</a> ·
+			<a href="https://github.com/everm4iva/starl/blob/main/LICENSE">PFF license</a>
+		</p>
+	</footer>
+
+</body>
+</html>

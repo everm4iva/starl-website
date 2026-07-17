@@ -1,0 +1,317 @@
+@import url('./main.css');
+
+/* -------------------------------------------------- docs page -------------------------------------------------- */
+
+.docs-intro {
+	font-size: 1.4rem;
+	max-width: 720px;
+	margin-bottom: 10px;
+	line-height: 1.3;
+}
+
+/* -------------------------------------------------- layout -------------------------------------------------- */
+
+.docs-layout {
+	display: grid;
+	grid-template-columns: 260px 1fr;
+	gap: 30px;
+	align-items: start;
+max-width: 100%;
+}
+
+@media (max-width: 800px) {
+	.docs-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* -------------------------------------------------- sidebar -------------------------------------------------- */
+
+.doc-sidebar {
+	position: sticky;
+	top: 70px;
+}
+
+@media (max-width: 800px) {
+	.doc-sidebar {
+		position: static;
+	}
+}
+
+.doc-nav {
+	border: var(--punk-border);
+	background: var(--punk-white);
+	box-shadow: var(--punk-shadow);
+	padding: 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	max-height: 70vh;
+	overflow-y: auto;
+}
+
+.doc-nav-group {
+	font-family: var(--pixel-font);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	background: var(--punk-black);
+	color: var(--punk-acid);
+	padding: 6px 10px;
+	margin: 12px 0 6px;
+	transform: rotate(-1deg);
+}
+
+.doc-nav-group:first-child {
+	margin-top: 0;
+}
+
+.doc-nav-link {
+	font-family: var(--pixel-font);
+	font-size: 0.78rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 6px 10px;
+	border: 2px solid transparent;
+}
+
+.doc-nav-link::before {
+	content: '» ';
+	color: var(--punk-accent);
+}
+
+.doc-nav-link:hover {
+	background: var(--punk-acid);
+	border-color: var(--punk-black);
+	transform: translateX(4px);
+}
+
+.doc-nav-link.active {
+	background: var(--punk-accent);
+	color: var(--punk-white);
+	border-color: var(--punk-black);
+	box-shadow: 3px 3px 0 var(--punk-black);
+}
+
+.doc-nav-link.active::before {
+	content: '★ ';
+	color: var(--punk-acid);
+	display: inline-block;
+	animation: wiggle-b 0.9s var(--snap) infinite;
+}
+
+/* -------------------------------------------------- reader -------------------------------------------------- */
+
+.doc-reader {
+	border: var(--punk-border);
+	background: var(--punk-white);
+	box-shadow: var(--punk-shadow-accent);
+	padding: 26px 30px;
+	min-height: 400px;
+}
+
+.doc-toolbar {
+	text-align: right;
+	margin-bottom: 14px;
+}
+
+.doc-toolbar-link {
+	font-family: var(--pixel-font);
+	font-size: 0.75rem;
+	text-decoration: none;
+	background: var(--punk-black);
+	color: var(--punk-white);
+	padding: 6px 10px;
+	display: inline-block;
+	transform: rotate(1deg);
+}
+
+.doc-toolbar-link:hover {
+	background: var(--punk-pink);
+	color: var(--punk-black);
+}
+
+.doc-status {
+	font-family: var(--pixel-font);
+	font-size: 1rem;
+	text-transform: uppercase;
+	padding: 30px 10px;
+	display: none;
+}
+
+.doc-status-star {
+	display: inline-block;
+	color: var(--punk-accent);
+	animation: stamp-spin 1.2s var(--snap-3) infinite;
+	margin-right: 10px;
+	font-size: 1.4rem;
+}
+
+.doc-reader.loading .doc-status { display: block; }
+.doc-reader.loading .doc-content { display: none; }
+
+.doc-reader.error .doc-status { display: block; }
+.doc-reader.error .doc-status-star { color: var(--punk-pink); }
+.doc-reader.error #doc-status-text {
+	background: var(--punk-pink);
+	padding: 2px 8px;
+}
+.doc-reader.error .doc-content { display: none; }
+
+/* -------------------------------------------------- doc content -------------------------------------------------- */
+
+.doc-content {
+	font-size: 1.35rem;
+	line-height: 1.4;
+}
+
+.doc-content h1,
+.doc-content h2,
+.doc-content h3,
+.doc-content h4,
+.doc-content h5,
+.doc-content h6 {
+	font-family: var(--pixel-font);
+	text-transform: uppercase;
+	margin: 28px 0 14px;
+	line-height: 1.2;
+}
+
+.doc-content h1 {
+	font-size: 1.8rem;
+	background: var(--punk-black);
+	color: var(--punk-white);
+	display: inline-block;
+	padding: 8px 16px;
+	box-shadow: var(--punk-shadow-small);
+	transform: rotate(-1deg);
+}
+
+.doc-content h2 {
+	font-size: 1.3rem;
+	border-bottom: 4px solid var(--punk-accent);
+	display: inline-block;
+	padding-bottom: 4px;
+}
+
+.doc-content h3 {
+	font-size: 1.05rem;
+	background: var(--punk-acid);
+	display: inline-block;
+	padding: 3px 10px;
+	transform: rotate(-0.5deg);
+}
+
+.doc-content h4, .doc-content h5, .doc-content h6 {
+	font-size: 0.95rem;
+}
+
+.doc-content p {
+	margin-bottom: 14px;
+}
+
+.doc-content a {
+	color: var(--punk-accent);
+	text-decoration-thickness: 3px;
+}
+
+.doc-content a:hover {
+	background: var(--punk-acid);
+	color: var(--punk-black);
+}
+
+.doc-content b {
+	background: var(--punk-acid);
+	padding: 0 4px;
+}
+
+.doc-content ul, .doc-content ol {
+	margin: 0 0 16px 26px;
+}
+
+.doc-content li {
+	margin-bottom: 6px;
+}
+
+.doc-content ul li::marker {
+	content: '★ ';
+	color: var(--punk-accent);
+}
+
+.doc-content code {
+	font-family: var(--pixel-font);
+	font-size: 0.85em;
+	background: var(--punk-black);
+	color: var(--punk-acid);
+	padding: 2px 6px;
+}
+
+.doc-content pre {
+	background: var(--punk-black);
+	border: var(--punk-border-thin);
+	box-shadow: var(--punk-shadow-small);
+	padding: 16px;
+	margin: 0 0 18px;
+	overflow-x: auto;
+	transform: rotate(-0.3deg);
+}
+
+.doc-content pre code {
+	background: none;
+	padding: 0;
+	display: block;
+	white-space: pre;
+}
+
+.doc-content blockquote {
+	border-left: 8px solid var(--punk-pink);
+	border-top: var(--punk-border-thin);
+	border-bottom: var(--punk-border-thin);
+	border-right: var(--punk-border-thin);
+	background: var(--punk-paper);
+	box-shadow: var(--punk-shadow-small);
+	padding: 12px 16px;
+	margin: 0 0 18px;
+}
+
+.doc-content blockquote p {
+	margin-bottom: 6px;
+}
+
+.doc-content table {
+	border-collapse: collapse;
+	margin: 0 0 18px;
+	width: 100%;
+	box-shadow: var(--punk-shadow-small);
+}
+
+.doc-content th, .doc-content td {
+	border: var(--punk-border-thin);
+	padding: 8px 12px;
+	text-align: left;
+	font-size: 1.2rem;
+}
+
+.doc-content th {
+	font-family: var(--pixel-font);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	background: var(--punk-black);
+	color: var(--punk-acid);
+}
+
+.doc-content tr:nth-child(even) td {
+	background: #00000008;
+}
+
+.doc-content img {
+	max-width: 100%;
+	border: var(--punk-border);
+	box-shadow: var(--punk-shadow);
+	margin: 10px 0 18px;
+}
+
+.doc-content hr {
+	border: none;
+	border-top: 4px dashed var(--punk-black);
+	margin: 26px 0;
+}

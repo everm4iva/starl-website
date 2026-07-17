@@ -1,0 +1,48 @@
+@import url('./fonts.css');
+
+/* -- root properties -- */
+:root {
+	/* punk palette */
+	--punk-black: #000000;
+	--punk-white: #ffffff;
+	--punk-accent: #b039e4;
+	--punk-acid: #eaff00;
+	--punk-pink: #ff2e88;
+	--punk-cyan: #00ffe1;
+	--punk-paper: #f2f0e6;
+
+	/* punk building blocks */
+	--punk-border: 4px solid var(--punk-black);
+	--punk-border-thin: 3px solid var(--punk-black);
+	--punk-shadow: 8px 8px 0 var(--punk-black);
+	--punk-shadow-small: 5px 5px 0 var(--punk-black);
+	--punk-shadow-accent: 8px 8px 0 var(--punk-accent);
+	--punk-shadow-acid: 8px 8px 0 var(--punk-acid);
+	--punk-shadow-pink: 8px 8px 0 var(--punk-pink);
+
+	/* cursors - the little guys following your hand around */
+	--cursor-default: url('../media/cursor/cursor.png') 4 12, auto;
+	--cursor-aim: url('../media/cursor/aim.png') 4 4, pointer;
+	--cursor-aim-press: url('../media/cursor/aim-expand.png') 8 8, pointer;
+	--cursor-rockit: url('../media/cursor/rockit.png') 4 12, auto;
+	--cursor-omg: url('../media/cursor/omg.png') 8 8, auto;
+
+	/* fonts */
+	--pixel-font: 'Juxel', 'Jersey10', Courier, monospace;
+	--pixel-font-big: 'Jersey10', 'Juxel', Courier, monospace;
+	--body-font: 'Jersey10', Courier, monospace;
+
+	/* the app side of things - for the app-styled feature cards */
+	--app-bg: #181818;
+	--app-bg-soft: #232323;
+	--app-accent: #b039e4;
+	--app-accent-transparent-2: #b039e422;
+	--app-accent-transparent-4: #b039e444;
+	--app-font: 'Fredoka', 'Inter', sans-serif;
+	--app-radius: 18px;
+
+	/* motion - everything snaps, nothing glides */
+	--snap: steps(1, end);
+	--snap-2: steps(2, end);
+	--snap-3: steps(3, end);
+}

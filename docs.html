@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>starl - docs</title>
+	<meta name="description" content="the living starl documentation - fetched straight from github, always fresh" />
+	<link rel="icon" href="media/img/GlitterMadness-Frame.png" />
+	<link rel="stylesheet" href="styles/docs.css" />
+	<link rel="stylesheet" href="styles/spray.css" />
+	<link rel="stylesheet" href="styles/drag.css" />
+	<script src="js/wiggle.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<script src="js/drag.js" defer></script>
+	<script src="js/md.js" defer></script>
+	<script src="js/docs.js" defer></script>
+</head>
+<body>
+
+	<!-- ============================== nav ============================== -->
+	<nav class="punk-nav">
+		<a class="nav-logo" href="index.html">STARL</a>
+		<a href="index.html#features">FEATURES</a>
+		<a href="faq.html">FAQ</a>
+		<a href="docs.html">DOCS</a>
+		<a href="https://github.com/everm4iva/starl">GITHUB</a>
+	</nav>
+
+	<!-- ============================== header ============================== -->
+	<header class="hero">
+		<h1 class="hero-title" data-wiggle>DOCS</h1>
+		<p class="hero-sub">FETCHED LIVE, Know more about starl</p>
+	</header>
+
+	<div class="tape acid"><span class="tape-inner">NO GATEKEEPING ★ READ IT ★ UNDERSTAND IT ★ CHANGE IT ★ OWN IT ★ </span></div>
+
+	<!-- ============================== the living docs ============================== -->
+	<!-- the nav and the doc content get built by docs.js from url.txt on github,
+	     so this page never needs an update when docs change - it just knows -->
+	<section class="section docs-layout">
+		<aside class="doc-sidebar">
+			<nav id="doc-nav" class="doc-nav">
+				<div class="doc-nav-group blink">LOADING THE LIST...</div>
+			</nav>
+		</aside>
+
+		<div id="doc-reader" class="doc-reader loading">
+			<div class="doc-toolbar">
+				<a id="doc-github-link" class="doc-toolbar-link" href="https://github.com/everm4iva/starl" target="_blank" rel="noopener">VIEW THIS PAGE ON GITHUB »</a>
+			</div>
+
+			<div class="doc-status">
+				<span class="doc-status-star">★</span>
+				<span id="doc-status-text" class="blink">FETCHING THE DOC LIST...</span>
+			</div>
+
+			<article id="doc-content" class="doc-content"></article>
+		</div>
+	</section>
+
+	<noscript>
+		<section class="section">
+			<p class="docs-intro">
+				javascript is off, so the living docs can't fetch themselves - but everything
+				still lives on <a href="https://github.com/everm4iva/starl">github</a>, go read it there
+			</p>
+		</section>
+	</noscript>
+
+	<!-- ============================== footer ============================== -->
+	<footer class="punk-footer">
+		<span class="foot-star" data-spray>★</span>
+		<p>
+			starl -
+			<a href="index.html">back home</a> ·
+			<a href="faq.html">faq</a> ·
+			<a href="https://github.com/everm4iva/starl">github</a>
+		</p>
+	</footer>
+
+</body>
+</html>

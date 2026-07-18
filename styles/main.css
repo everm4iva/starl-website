@@ -11,6 +11,7 @@
 html {
 	scroll-behavior: auto;
 	cursor: var(--cursor-default);
+ overflow-x: hidden;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
 	font-family: var(--body-font);
 	font-size: 1.4rem;
 	overflow-x: hidden;
+ max-width: 100%;
 	background-image:
 		repeating-linear-gradient(
 			45deg,

@@ -16,13 +16,21 @@
 	<script src="js/changelog.js" defer></script>
 </head>
 <body>
+	<!-- ============================== nav ============================== -->
+	<nav class="punk-nav">
+		<a class="nav-logo" href="index.html">STARL</a>
+		<a href="docs.html">DOCS</a>
+        <a href="404.html">404 page (just because)</a>
+	</nav>
 
+	<!-- ============================== header ============================== -->
 	<header class="hero">
 		<h1 class="hero-title" data-wiggle>Changelog</h1>
 		<p class="hero-sub">What changed since last version?</p>
 	</header>
 
-			<article id="doc-content" class="doc-content" style="padding-left: 4%; padding-right: 4%;">
+	<!-- ============================== the actual content ============================== -->
+<article id="doc-content" class="doc-content" style="padding-left: 4%; padding-right: 4%;">
 
 # ☆ Beta 1.0.1 (2026-07-20)
 - Minor bug fixes and optimizations.
@@ -39,6 +47,8 @@
 - Updated server dependencies to latest versions.
 - Removed "pot-provider" package, just a dependency that was not being used anymore, if any bug was caused by this change, please report it.
 - Configured port in "config.yaml" wasn't applying through out the code. Fixed that
+
+---
 
 # ☆ Beta 1.0 (2026-07-14)
 -  "Get your mood on"
@@ -92,7 +102,7 @@ Gosh.. it's been a long time (almost 4 weeks lol) since the last update, here is
 - Finnaly got over those age restriction errors! No more restrictions HELL YEAH! (server side)
 - Added a privacy and data policy, check it out: <a href="./privacy&data.html" target="_blank">Your data and privacy</a>
 - Now you can comfortably duplicate a playlist by clicking the "duplicate" option in the playlist options.
-- Multi Support artist! (view artist option in the track context menu) - now you can view the artist page of any of the artists that are credited in a track.
+- Multi artist support! (view artist option in the track context menu) - now you can view the artist page of any of the artists that are credited in a track.
 - Export & Repair playlist functions avaliable in the playlist context menu (export to json, repair missing tracks)
 
 ## For developers:
@@ -171,9 +181,12 @@ Gosh.. it's been a long time (almost 4 weeks lol) since the last update, here is
 - @SubhrajitSain - "good app. me like."
 - @InkChasm - "green - chasm"
 
-# ☆ Alpha 0.1.1 (2026-06-05)
+---
 
-### --- Added ---
+# ☆ Alpha 0.1.1 (2026-06-05)
+-  More of more
+
+## --- Added ---
 - System back button: minimizes player, closes overlays, navigates back
 - Custom splash screen via StarlSplash plugin (replaces Cordova default)
 - Missing symbols and action variables in plugins
@@ -188,7 +201,7 @@ Gosh.. it's been a long time (almost 4 weeks lol) since the last update, here is
 - Better code comments and CSS/HTML cleanup
 - Small elements request low res images, and big elements request hi res images (for better performance)
 
-### --- Fixed ---
+## --- Fixed ---
 - Artist/album pages mixed content when names were identical (now uses Channel-ID/Album-ID)
 - "See more tracks" on artist page returned false positive
 - Auto-play on app start (no more jump scares)
@@ -203,10 +216,10 @@ Gosh.. it's been a long time (almost 4 weeks lol) since the last update, here is
 - Queue doesn't follow the current context.
 - Shuffle action has now impact on the current queue.
 
-### --- Removed ---
+## --- Removed ---
 - Star action from search results in Recents (*open an issue to request it back*)
 
-### --- Extras ---
+## --- Extras ---
 - Added cute explanatory headers and modularized some long nested codes into different files!
 
 ### --- Special thanks to! ---
@@ -217,6 +230,8 @@ Gosh.. it's been a long time (almost 4 weeks lol) since the last update, here is
 - @wasSammyDev - for the website help (tho its not ready yet, but stilll!)
 - @pinguino - for all the support, encouragement and for being the person i needed to start this project in the first place <3
 - @starloexoliz11 - "Testing the best music app there is :3"
+
+---
 
 ## indev (day 12) - 2026-06-05
 - Released Version Alpha 0.1.0!
@@ -288,6 +303,6 @@ Gosh.. it's been a long time (almost 4 weeks lol) since the last update, here is
 ## indev (first day) - 2026-05-22
 - Official start of the project. I have the base cordova project for now
 
-            </article>
+</article>
 </body>
 </html>

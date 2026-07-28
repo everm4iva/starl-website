@@ -19,7 +19,7 @@ const urlToSlug = {};
 // -- manifest parsing - "slug: url" lines, "---" starts a new group --
 function parseManifest(text) {
 	const groups = [];
-	let current = { title: DOCS_GROUP_TITLES[0] || 'DOCS', docs: [] };
+	let current = {title: DOCS_GROUP_TITLES[0] || 'DOCS', docs: []};
 
 	for (const rawLine of text.split(/\r?\n/)) {
 		const line = rawLine.trim();
@@ -28,7 +28,7 @@ function parseManifest(text) {
 		// group separator, grab the next title from the list
 		if (line === '---') {
 			if (current.docs.length) groups.push(current);
-			current = { title: DOCS_GROUP_TITLES[groups.length] || 'MORE', docs: [] };
+			current = {title: DOCS_GROUP_TITLES[groups.length] || 'MORE', docs: []};
 			continue;
 		}
 
@@ -40,7 +40,7 @@ function parseManifest(text) {
 		const url = line.slice(sep + 1).trim();
 		if (!slug || !url.startsWith('http')) continue;
 
-		current.docs.push({ slug, url });
+		current.docs.push({slug, url});
 		slugToUrl[slug] = url;
 		urlToSlug[normalizeUrl(url)] = slug;
 	}

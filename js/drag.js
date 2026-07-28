@@ -91,10 +91,14 @@ document.addEventListener('pointerup', () => {
 
 	// if it actually traveled, eat the click so links don't fire on drop
 	if (itMoved) {
-		document.addEventListener('click', (e) => {
-			e.preventDefault();
-			e.stopPropagation();
-		}, { capture: true, once: true });
+		document.addEventListener(
+			'click',
+			(e) => {
+				e.preventDefault();
+				e.stopPropagation();
+			},
+			{capture: true, once: true},
+		);
 	}
 
 	held = null;

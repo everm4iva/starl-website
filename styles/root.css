@@ -1,8 +1,7 @@
 @import url('./fonts.css');
 
-/* -- root properties -- */
 :root {
-	/* punk palette */
+	/* fucking colorful palette :P */
 	--punk-black: #000000;
 	--punk-white: #ffffff;
 	--punk-accent: #b039e4;
@@ -11,7 +10,7 @@
 	--punk-cyan: #00ffe1;
 	--punk-paper: #f2f0e6;
 
-	/* punk building blocks */
+	/* punk blocks */
 	--punk-border: 4px solid var(--punk-black);
 	--punk-border-thin: 3px solid var(--punk-black);
 	--punk-shadow: 8px 8px 0 var(--punk-black);
@@ -21,11 +20,11 @@
 	--punk-shadow-pink: 8px 8px 0 var(--punk-pink);
 
 	/* cursors - the little guys following your hand around */
-	--cursor-default: url('../media/cursor/cursor.png') 4 12, auto;
-	--cursor-aim: url('../media/cursor/aim.png') 4 4, pointer;
-	--cursor-aim-press: url('../media/cursor/aim-expand.png') 8 8, pointer;
-	--cursor-rockit: url('../media/cursor/rockit.png') 4 12, auto;
-	--cursor-omg: url('../media/cursor/omg.png') 8 8, auto;
+	--cursor-default: url('../media/cursor/cursor.png') 0 12, auto;
+	--cursor-aim: url('../media/cursor/link.png') 0 12, pointer;
+	--cursor-aim-press: url('../media/cursor/link-click.png') 0 12, pointer;
+	--cursor-rockit: url('../media/cursor/rockit.png') 0 12, auto;
+	--cursor-omg: url('../media/cursor/omg.png') 0 12, auto;
 
 	/* fonts */
 	--pixel-font: 'Juxel', 'Jersey10', Courier, monospace;

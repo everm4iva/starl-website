@@ -36,14 +36,18 @@ document.addEventListener('click', (e) => {
 // and once you hit either end the page just scrolls on like normal
 document.addEventListener('DOMContentLoaded', () => {
 	document.querySelectorAll('.shots').forEach((strip) => {
-		strip.addEventListener('wheel', (e) => {
-			if (e.deltaY === 0) return;
+		strip.addEventListener(
+			'wheel',
+			(e) => {
+				if (e.deltaY === 0) return;
 
-			// while you're over the strip, the wheel belongs to the strip -
-			// the page stays put, no sneaky double scrolling
-			e.preventDefault();
-			strip.scrollLeft += e.deltaY;
-		}, { passive: false });
+				// while you're over the strip, the wheel belongs to the strip -
+				// the page stays put, no sneaky double scrolling
+				e.preventDefault();
+				strip.scrollLeft += e.deltaY;
+			},
+			{passive: false},
+		);
 	});
 });
 

@@ -5,40 +5,57 @@
 
 // -- the html we let through - readmes love their <div align="center"> stuff --
 // everything else stays escaped, so random tags can't do anything funny
-const HTML_TAGS_ALLOWED = ['div', 'center', 'span', 'sub', 'sup', 'b', 'strong', 'i', 'em', 'u', 's', 'br', 'img', 'a', 'kbd', 'details', 'summary'];
+const HTML_TAGS_ALLOWED = [
+	'div',
+	'center',
+	'span',
+	'sub',
+	'sup',
+	'b',
+	'strong',
+	'i',
+	'em',
+	'u',
+	's',
+	'br',
+	'img',
+	'a',
+	'kbd',
+	'details',
+	'summary',
+];
 const HTML_ATTRS_ALLOWED = ['align', 'src', 'width', 'height', 'alt', 'href', 'title', 'open'];
 
 // -- keep raw html out, we only trust our own tags --
 function escapeHtml(text) {
-	return text
-		.replace(/&/g, '&amp;')
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
-		.replace(/"/g, '&quot;');
+	return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 // -- bring the whitelisted tags back after escaping --
 // we escape everything first, then only un-escape tags from the allow list,
 // with their attributes checked one by one - the polite bouncer approach
 function restoreHtml(text) {
-	return text.replace(/&lt;(\/?)([a-zA-Z][a-zA-Z0-9]*)((?:\s+[a-zA-Z-]+=&quot;.*?&quot;)*)\s*(\/?)&gt;/g, (match, close, tag, attrs, selfClose) => {
-		tag = tag.toLowerCase();
-		if (!HTML_TAGS_ALLOWED.includes(tag)) return match;
+	return text.replace(
+		/&lt;(\/?)([a-zA-Z][a-zA-Z0-9]*)((?:\s+[a-zA-Z-]+=&quot;.*?&quot;)*)\s*(\/?)&gt;/g,
+		(match, close, tag, attrs, selfClose) => {
+			tag = tag.toLowerCase();
+			if (!HTML_TAGS_ALLOWED.includes(tag)) return match;
 
-		// rebuild attributes, but only the harmless ones
-		let clean = '';
-		const attrRe = /([a-zA-Z-]+)=&quot;(.*?)&quot;/g;
-		let m;
-		while ((m = attrRe.exec(attrs)) !== null) {
-			const name = m[1].toLowerCase();
-			const value = m[2];
-			if (!HTML_ATTRS_ALLOWED.includes(name)) continue;
-			if ((name === 'href' || name === 'src') && /^\s*javascript:/i.test(value)) continue;
-			clean += ' ' + name + '="' + value + '"';
-		}
+			// rebuild attributes, but only the harmless ones
+			let clean = '';
+			const attrRe = /([a-zA-Z-]+)=&quot;(.*?)&quot;/g;
+			let m;
+			while ((m = attrRe.exec(attrs)) !== null) {
+				const name = m[1].toLowerCase();
+				const value = m[2];
+				if (!HTML_ATTRS_ALLOWED.includes(name)) continue;
+				if ((name === 'href' || name === 'src') && /^\s*javascript:/i.test(value)) continue;
+				clean += ' ' + name + '="' + value + '"';
+			}
 
-		return '<' + close + tag + clean + (selfClose ? ' /' : '') + '>';
-	});
+			return '<' + close + tag + clean + (selfClose ? ' /' : '') + '>';
+		},
+	);
 }
 
 // -- inline stuff - bold, italic, code, links, images, strikes --
@@ -94,10 +111,16 @@ function markdownToHtml(md) {
 		while (listStack.length) html.push('</' + listStack.pop() + '>');
 	}
 	function closeTable() {
-		if (inTable) { html.push('</table>'); inTable = false; }
+		if (inTable) {
+			html.push('</table>');
+			inTable = false;
+		}
 	}
 	function closeQuote() {
-		if (inQuote) { html.push('</blockquote>'); inQuote = false; }
+		if (inQuote) {
+			html.push('</blockquote>');
+			inQuote = false;
+		}
 	}
 	function closeAll() {
 		closeLists();
@@ -147,7 +170,10 @@ function markdownToHtml(md) {
 		if (quote) {
 			closeLists();
 			closeTable();
-			if (!inQuote) { html.push('<blockquote>'); inQuote = true; }
+			if (!inQuote) {
+				html.push('<blockquote>');
+				inQuote = true;
+			}
 			html.push('<p>' + renderInline(quote[1]) + '</p>');
 			continue;
 		}
@@ -180,7 +206,10 @@ function markdownToHtml(md) {
 
 			// open or close lists until the stack matches the depth
 			while (listStack.length > depth) html.push('</' + listStack.pop() + '>');
-			while (listStack.length < depth) { html.push('<' + tag + '>'); listStack.push(tag); }
+			while (listStack.length < depth) {
+				html.push('<' + tag + '>');
+				listStack.push(tag);
+			}
 
 			html.push('<li>' + renderInline(li[3]) + '</li>');
 			continue;

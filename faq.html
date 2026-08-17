@@ -66,17 +66,6 @@
 			</details>
 
 			<details class="faq-item">
-				<summary>how did streaming latency drop from 17s to 2s?</summary>
-				<div class="answer">
-					<p>
-						server's fault. every image and every audio requested gets stored to disk - next time anything
-						asks for it, the server streams it straight from disk instead of going back to youtube. plus the
-						server got rebuilt in nodejs, keeping only yt-dlp and ytmusicapi in python.
-					</p>
-				</div>
-			</details>
-
-			<details class="faq-item">
 				<summary>there's no download button. how do i have songs offline?</summary>
 				<div class="answer">
 					<p>
@@ -137,6 +126,69 @@
 						server, so logging back in syncs it all back - and the server probably still has your songs
 						cached, so streaming is instant again.
 					</p>
+				</div>
+			</details>
+
+			<details class="faq-item">
+				<summary>Why new fetched content is not playable (even if url is valid)?</summary>
+				<div class="answer">
+					<p>
+						It all comes up to the server.
+						<ul>
+							<li>Make sure the cookies are updated (server NEEDS to act like a
+						browser, cookies are crucial for that)</li>
+						<li>Make sure the cache is not corrupted in the server
+						files.</li>
+						<li>Make sure the cache is not corrupted in the client side (use the "Reset Track Cache"
+						feature in the track context menu to fix that)</li>
+						<li>Make sure the server is not overloaded, if it
+						is, it will fail to fetch new content and return a 502 Bad Gateway error. (close server and wait
+						about a minute for it to reset, then try again)</li>
+						<li>Make sure the server is not running out of
+						disk space, if it is, it will fail to fetch new content and return a 502 Bad Gateway error.
+						(free up some space and try again)</li>
+						</ul>
+					</p>
+					<p>
+					With all those checks, if the problem persists, please report it in the <a href="https://github.com/everm4iva/starl/issues">Issues page</a> with the tag "FAQ"  - mentioning this part, and i will try to fix it as soon as possible.
+					</p>
+					<blockquote>
+						> Public server note: those issues, when not reported can take a few hours/days to be fixed - so if you are using the public server, please be patient.
+					</blockquote>
+				</div>
+			</details>
+
+						<details class="faq-item">
+				<summary>Why does the app sometimes take a few seconds to start playing a track, even if it's already cached?</summary>
+				<div class="answer">
+					<p>
+					Sometimes the app needs to prewarm the track before it can start playing it. This is because the app needs to resolve the track's URL and get the necessary metadata before it can start playing it.
+					</p>
+					<p>
+						or!!
+					</p>
+				<p>
+					The server is being silly and is taking a few seconds to respond to the request. This can happen if the server is overloaded or if there is a network issue.
+				</p>
+				</div>
+			</details>
+
+			<details class="faq-item">
+				<summary>Why is the lyrics incorrect or in another language?</summary>
+				<div class="answer">
+					<p>
+						<ol>
+							<li>
+								The lyrics are fetched from a third-party service, and sometimes that service can return incorrect or outdated lyrics. If the lyrics are incorrect, it could be due to a temporary issue with the lyrics service.
+							</li>
+							<li>
+								The server is fetching the lyrics in a wrong or incorrect format.. for example artists or complex music names can cause the lyrics service to return incorrect response.
+							</li>
+						</ol>
+					</p>
+					<blockquote>
+					Public server note: if you are using the public server, the lyrics files are re-cached every 42 hours.
+					</blockquote>
 				</div>
 			</details>
 
